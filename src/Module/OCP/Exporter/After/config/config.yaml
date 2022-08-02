@@ -1,0 +1,8 @@
+services:
+
+    App\Module\OCP\Exporter\After\:
+        resource: '../*'
+        autowire: true
+        autoconfigure: true
+        bind:
+            $userRepository: '@App\Module\SRP\Exporter\After\Exporter\Repository\UserDBALRepository'

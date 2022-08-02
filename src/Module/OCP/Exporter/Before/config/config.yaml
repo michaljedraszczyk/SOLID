@@ -1,0 +1,9 @@
+services:
+
+    App\Module\SRP\Exporter\After\:
+        resource: '../*'
+        autowire: true
+        autoconfigure: true
+        bind:
+            $userRepository: '@App\Module\SRP\Exporter\After\Exporter\Repository\UserDBALRepository'
+            $exporter: '@App\Module\SRP\Exporter\After\Exporter\Exporter\CSVExporter'
